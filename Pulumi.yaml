@@ -1,0 +1,7 @@
+name: k8s
+runtime: go
+description: GKE minimal project
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-go
