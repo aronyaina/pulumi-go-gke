@@ -8,9 +8,9 @@ import (
 var MachineType pulumi.String = "e2-micro"
 var Zone pulumi.String = "us-central1"
 var NodePoolName pulumi.String = "k8s-node-pool"
-var NodeCount pulumi.Int = 1
+var NodeCount pulumi.Int = 2
 var MinNodeCount pulumi.Int = 1
-var MaxNodeCount pulumi.Int = 1
+var MaxNodeCount pulumi.Int = 2
 
 func CreateNodePool(ctx *pulumi.Context, cluster *container.Cluster, serviceAccountEmail pulumi.StringInput) error {
 	_, err := container.NewNodePool(ctx, "primary_preemptible_nodes", &container.NodePoolArgs{
